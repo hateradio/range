@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Range with Style * Preview * <%= @section %> * <%= @style %></title>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1;IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link href="/static/global.css" rel="stylesheet" type="text/css" />
+	<link href="<%= $host + '/dat.style/range/' + @style %>.css" title="Lorem ipsum" rel="stylesheet" type="text/css" media="screen" />
+	<style type="text/css">
+
+.linker {
+    background: #111;
+    padding: 14px 0;
+    text-align: center;
+}
+
+.linker > ul, .linker h1 {
+    display: inline;
+}
+.linker li {
+    display: inline;
+}
+
+.linker li {
+	padding: 0 10px;
+}
+
+#styles {
+	text-align: left;
+	display:block
+}
+
+#styles > li {
+	padding: 0
+}
+
+.linker .selected a {
+	font-weight: inherit;
+	text-decoration: underline;
+}
+	</style>
+</head>
+<body id="index">
+<div id="wrapper">
+<div class="linker">
+	<h1><a href="/" title="Home">#</a> Preview</h1>
+	<ul>
+<%
+  RangeApp::SDB.sections.each do |name, title|
+%>
+		<li<%=' class="selected"' if @section == name.to_s %>>
+			<a href="/preview/<%=name%>?style=<%= @style %>" title="<%=title%>"><%=name.capitalize%></a>
+		</li>
+<%
+  end
+%>
+	</ul>
+
+	<ul id="styles">
+<%
+  RangeStyle.styles.each do |name, hash|
+%>
+		<li>#<%=name%>
+			<ul>
+<%
+	hash.each do |key, value|
+      value.each do |extra|
+		style = "#{name}.#{key}.#{extra}"
+%>
+				<li<%=' class="selected"' if @style == style %>>
+					<a href="?style=<%=style%>"><%="#{name}.#{key}.#{extra}"%>.css</a>
+				</li>
+<%
+      end
+    end
+%>
+			</ul>
+		</li>
+<%  end %>
+	</ul>
+</div>
+<div id="header">
+	<div id="logo"><a href="#"></a></div>
+	<div id="userinfo">
+		<ul id="userinfo_username">
+			<li id="nav_userinfo"><a href="#" class="username">Lorem Ipsum</a></li>
+			<li id="nav_useredit" class="brackets"><a href="#">Dolor</a></li>
+			<li id="nav_logout" class="brackets"><a href="#">Sit</a></li>
+		</ul>
+		<ul id="userinfo_major">
+			<li id="nav_upload" class="brackets"><a href="#">Lorem</a></li>
+			<li id="nav_invite" class="brackets"><a href="#">Ipsum (1)</a></li>
+			<li id="nav_donate" class="brackets"><a href="#">Dolor</a></li>
+			<li id="nav_store" class="brackets"><a href="#">Sit</a></li>
+</ul>
+		<ul id="userinfo_stats">
+			<li id="stats_seeding"><a href="#">Lorem</a>: <span class="stat" title="Lorem ipsum">999.99 L</span></li>
+			<li id="stats_leeching"><a href="#">Ipsum</a>: <span class="stat" title="Lorem ipsum">999.99 L</span></li>
+			<li id="stats_ratio">Dolor: <span class="stat"><span class="r50" title="Lorem ipsum">999.99</span></span></li>
+			<li id="stats_required"><a href="#">Sit</a>: <span class="stat" title="Lorem ipsum">9.99</span></li>
+		</ul>
+
+		<ul id="userinfo_minor">
+			<li id="nav_inbox"><a href="#">Lorem</a></li>
+			<li id="nav_staffinbox"><a href="#">Ipsum</a></li>
+			<li id="nav_uploaded"><a href="#">Dolor</a></li>
+			<li id="nav_bookmarks"><a href="#">Sit</a></li>
+			<li id="nav_notifications" ><a href="#">Amet</a></li>
+			<li id="nav_subscriptions"><a href="#">Consectetur</a></li>
+			<li id="nav_comments"><a href="#">Adipscing</a></li>
+			<li id="nav_friends"><a href="#">Elit</a></li>
+		</ul>
+	</div>
+	<div id="menu">
+		<h4 class="hidden">Lorem Ipsum</h4>
+		<ul>
+			<li id="nav_index" class="active"><a href="#">Lorem</a></li>
+			<li id="nav_torrents"><a href="#">Ipsum</a></li>
+			<li id="nav_collages"><a href="#">Dolor</a></li>
+			<li id="nav_requests"><a href="#">Sit</a></li>
+			<li id="nav_forums"><a href="#">Amet</a></li>
+			<li id="nav_irc"><a href="#">Consectetur</a></li>
+			<li id="nav_top10"><a href="#">Adipscing</a></li>
+			<li id="nav_rules"><a href="#">Elit</a></li>
+			<li id="nav_wiki"><a href="#">Mauris</a></li>
+			<li id="nav_staff"><a href="#">Ac</a></li>
+		</ul>
+	</div>
+	<div id="alerts">
+			<div class="alertbar"><a href="#">Lorem ipsum dolor sit amet</a></div>
+		</div>
+
+	<div id="searchbars">
+		<ul>
+			<li id="searchbar_torrents">
+				<span class="hidden">Lorem: </span>
+				<form class="search_form" name="search" method="get">
+					<input
+						value="Lorem" type="text" name="searchstr" size="17"
+					/>
+				</form>
+			</li>
+			<li id="searchbar_artists">
+				<span class="hidden">Lorem: </span>
+				<form class="search_form" name="artists"  method="get">
+					<input
+						value="Lorem" type="text" name="artistname" size="17"
+					/>
+					<ul id="artistcomplete" style="visibility: hidden;"><li/></ul>
+				</form>
+			</li>
+			<li id="searchbar_requests">
+				<span class="hidden">Lorem: </span>
+				<form class="search_form" name="requests"  method="get">
+					<input
+						value="Lorem" type="text" name="search" size="17"
+					/>
+				</form>
+			</li>
+			<li id="searchbar_forums">
+				<span class="hidden">Lorem: </span>
+				<form class="search_form" name="forums"  method="get">
+					<input value="search" type="hidden" name="action" />
+					<input
+						value="Lorem" type="text" name="search" size="17"
+					/>
+				</form>
+			</li>
+			<li id="searchbar_log">
+				<span class="hidden">Lorem: </span>
+				<form class="search_form" name="log"  method="get">
+					<input
+						value="Lorem" type="text" name="search" size="17"
+					/>
+				</form>
+			</li>
+			<li id="searchbar_users">
+				<span class="hidden">Lorem: </span>
+				<form class="search_form" name="users"  method="get">
+					<input type="hidden" name="action" value="search" />
+					<input
+						value="Lorem" type="text" name="search" size="20"
+					/>
+				</form>
+			</li>
+		</ul>
+	</div>
+
+</div>
+<div id="content">
+<%= yield %>
+</div>
+<div id="footer">
+	<br /><br />
+	<div id="disclaimer_container" class="thin" style="text-align:center; margin-bottom:20px;">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac sapien vitae urna lobortis volutpat.
+	</div>
+	<p>
+		Lorem ipsum &copy; 2013 Lorem ipsum</p>
+	<p><a href="#" title="Lorem ipsum">Lorem ipsum <span class="time" title="">1 lorem ipsum</span> Lorem ipsum.</a></p>	<p>
+		<strong>Lorem ipsum:</strong> 999.999 ms
+		<strong>Lorem ipsum:</strong> 9.99 MB		<strong>Lorem ipsum:</strong> 9.99 9.99 9.999		<strong>Lorem ipsum:</strong> Lorem ipsum
+		<strong>Lorem ipsum:</strong> 9999
+	</p>
+	</div>
+
+</div>
+<div id="lightbox" class="lightbox hidden"></div>
+<div id="curtain" class="curtain hidden"></div>
+
+<!-- Extra divs, for stylesheet developers to add imagery -->
+<div id="extra1"><span></span></div>
+<div id="extra2"><span></span></div>
+<div id="extra3"><span></span></div>
+<div id="extra4"><span></span></div>
+<div id="extra5"><span></span></div>
+<div id="extra6"><span></span></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.masthead {
+    background: rgba(35, 37, 43, 0.84);
+    @include border-radius(14px 14px 14px 14px);
+    //margin: 60px 7px 19px;
+	margin: 0 7px 7px;
+    padding: 70px 0 30px;
+}
+
+.jumbotron h1 {
+	font-size: 7em;
+}
+
+#get_now ul ul li {
+    margin-bottom: 20px;
+}
+
+#get_now ul ul li input {
+	cursor: inherit;
+}

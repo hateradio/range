@@ -1,0 +1,117 @@
+@import "common";
+#wrapper {
+background-image: url("#{$imageDir}bg/range.bg.a9BD420.png") !important;
+}
+
+#header {
+background: url('#{$imageDir}log/range.bg.ptp.png') !important;
+background-position: 70px 20px !important;
+background-repeat: no-repeat !important;
+}
+
+#index #footer {
+margin: 0px auto;
+border-right: 10px solid white;
+border-left: 10px solid white;
+padding: 26px 30px 13px
+}
+.colhead_dark span,
+.head strong {
+float: none !important;
+}
+.head span {
+float: none !important;
+padding-left: 3px
+}
+
+#filmclubbody img {
+width: 220px
+}
+
+.latest5 {
+background: #2A2A2A !important;
+}
+#searchbars input {
+width: 100px !important
+}
+#movieinfo {
+margin-top: -5px
+}
+/* div#searchbars > ul {
+width: 931px;
+} */
+#torrentscomplete{
+left:27px
+}
+#searchbars > ul > li {
+width: 107px !important
+}
+#movieinfo p {
+padding: 1px 9px
+}
+#movieinfo p strong {
+display:block;
+margin: 3px 0px
+}
+#torrents .sidebar .box .body a {
+padding: 0;
+}
+#torrents .alertbar h2{
+font-size: 12px;
+letter-spacing: normal
+}
+#index .sidebar .colhead_dark,
+#roster .colhead_dark td,
+#last5t .colhead_dark {
+line-height: 14px !important;
+}
+img[src*='static/common/avatars/default.png'] {
+background: url('#{$imageDir}misc/range.i.a.def.gen.png');
+}
+.group_torrent a[href$="article&id=26"] img {
+padding-left: 4px;
+}
+.latest5 tr:first-child a:link,
+#user .recent a:link,
+#user .recent a:visited,
+#collage_table a:link,
+#collage_table a:visited,
+.collage_images a:link,
+.collage_images a:visited,
+ #needforseed .torrent_table td.small a[onclick] {
+min-height:122px
+}
+.latest5 tr:first-child img,
+#needforseed .torrent_table td.small a[onclick] img,
+#user .recent a img,
+#collage_table a img, .collage_images a img {
+border: 2px solid #111111;
+display: block;
+height: 122px;
+width: 98px;
+}
+.group .small a img {
+border: 2px solid #D7D5D5;
+box-shadow: 2px 2px 3px #000;
+-moz-border-radius: 1px;
+-webkit-border-radius: 1px;
+border-radius: 1px;
+}
+.latest5 td{
+padding: 7px 7px 0 !important
+}
+#bphistory,
+#bpphistory {
+padding:3px
+}
+.dropdownmenu {
+    height: 10px;
+    margin-top: -18px;
+}
+
+.browse_coverview_movie {
+    width: 17% !important
+}
+tr#taglist + tr td.nobr {
+    white-space: inherit !important;
+}

@@ -1,0 +1,309 @@
+﻿#wrapper {
+	background-color: #444;
+	background: url('#{$imageDir}bg/range.bg.zomby.png') 0 0;
+	//background: url('#{$imageDir}range.bg.a9BD420.png');
+	margin:auto;
+	min-width: 960px;
+	width: 95%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	border-right: 10px solid #fff;
+	border-left: 10px solid #fff;
+}
+
+#header,
+div#site_debug,
+#footer,
+#content {
+	padding: 26px 22px 13px;
+	margin: 0 8px;
+	background: #222;
+	width: auto;
+    min-width: 900px;
+	position: relative;
+}
+
+#header {
+	font-size: 13px;
+	font-weight: bold;
+	background: url('#{$imageDir}log/range.bg.whatcd.png') 280px top no-repeat;
+	padding: 0 0 10px;
+
+	ul {
+		overflow:hidden;
+		margin: 0;
+		
+		&:hover {
+			// height: auto;
+			overflow: hidden;
+		}
+		
+		li {
+			list-style-type: none;
+		}
+	}
+}
+
+#userinfo {
+	background: url('#{$imageDir}s/range.bg.transg2.png');
+	background: rgba(50, 50, 50, 0.95);
+	text-align: center;
+	overflow: hidden;
+	padding: 5px 8px 4px;
+	margin-bottom: 7px;
+	color: #eee;
+	@include textShadow(#000 1px 1px 2px);
+	@include boxShadow(0 0 3px #000000);
+	@include borderRadius(0 0 5px 5px);
+}
+
+	#userinfo_username,
+	#userinfo_major,
+	#userinfo_stats,
+	#userinfo_minor li,
+	#menu li {
+		float: left;
+		padding-bottom: 3px
+	}
+
+	#userinfo_minor {
+		font-size: 11px;
+		clear: both;
+		width: 940px;
+	}
+
+	#userinfo_stats {
+		float: right;
+		padding-top: 1px;
+		font-size: 11px
+	}
+
+		#userinfo_username li,
+		#userinfo_major li,
+		#userinfo_stats li,
+		#userinfo_minor li {
+			display: inline;
+			padding: 4px 4px
+		}
+// #menu:before {
+    // background: url("http://www.webdesignerwall.com/demo/css-gradient-text/images/gradient-dark-stripe-hz.png") repeat scroll 0 0 transparent;
+    // border: 1px solid blue;
+    // content: ".";
+    // display: block;
+    // height: 14px;
+    // left: 8px;
+    // margin: 0;
+    // overflow: hidden;
+    // position: absolute;
+    // top: 73px;
+    // width: 943px;
+// }
+#menu {
+
+	a {
+		&:link, &:visited {
+			color: #fff;
+		}
+		&:hover, &:visited:hover {
+			// lightblue 0 0 3px,
+			@include textShadow(#000 0 0 2px);
+		}
+	}
+	
+	ul {
+		list-style-position:outside;
+		font-size: 15px;
+		margin-bottom: 4px;
+		// width: 943px;
+		border-bottom: 3px solid #E4E4DC;
+		background-image: url('#{$imageDir}s/range.bg.transg.png');
+		white-space: nowrap;
+		background-color: #eee;
+		@include gradientLinear(#eee, #ccc);
+		@include borderRadius(1px);
+		
+		li {
+			display: inline;
+			float: none;
+			margin: 0 -3px;
+			padding: 0;
+		
+			a {
+				display: inline-block;
+				padding: 5px 0 6px;
+				text-align:center;
+				width:96px;
+				// @include textShadow('1px 0 1px #333, 0 0 1px lightblue, 0 1px 1px #333');
+				// text-shadow: 1px 0 1px #333, 0 0 1px lightblue, 0 1px 1px #333;
+				@include transition(background-color, .5s, ease-in-out);
+				-moz-text-shadow: 1px 0 1px #A6627A, 0 0 1px lightblue, 0 1px 1px #445187;
+				-webkit-text-shadow: 1px 0 1px #A6627A, 0 0 1px lightblue, 0 1px 1px #445187;
+				text-shadow: 1px 0 1px #A6627A, 0 0 1px lightblue, 0 1px 1px #445187;
+				&:hover {
+					@include gradientLinear(#444, #333);
+					@include textShadow(1px 1px 0px #2D3392);
+				}
+			}
+		}
+	}
+}
+
+#menu ul,
+#searchbars ul {
+	@include boxShadow(0 0 6px #000);
+	text-align:center;
+	width: auto
+}
+
+#alerts {
+	position: absolute;
+	top: 23px;
+	right: 11px;
+	padding: 4px;
+	font-size: 11px;
+	background: rgba(0, 0, 0, .23);
+	@include boxShadow(#222 1px 1px 0);
+	
+	div {
+		display: inline;
+	}
+}
+
+#searchbars {
+
+	input {
+		width: 120px;
+		opacity: .93
+	}
+	
+	& > ul {
+		height: 41px;
+		margin: 8px 0 0 0;
+		overflow: visible;
+		padding: 0;
+		// width: 943px;
+		background: url("#{$imageDir}s/range.bg.transg.png") repeat scroll 0 0 transparent;
+
+		li {
+			display:inline-block;
+			margin: 0 -3px;
+			overflow: hidden;
+			width: 129px;
+			height: 29px;
+			text-align: center;
+			cursor: pointer;
+			padding: 6px 13px 6px 13px;
+		}
+	}
+}
+#collage ul.collage_images {
+    width: 98% !important;
+}
+
+#torrentscomplete,
+#artistcomplete {
+	position: absolute;
+	z-index: 2;
+	width: 155px !important;
+	overflow: hidden;
+	margin: 0 0 0 -16px !important;
+	top: 134px;
+	background: #222;
+	font-size:12px;
+}
+
+#artistcomplete > li {
+	margin: 0 !important;
+	font-size: 11px;
+	width: 129px !important;
+	padding-top: 10px !important;
+	height: 17px !important;
+	cursor: pointer;
+	background: #222;
+}
+
+#content {
+	& > .linkbox {
+		text-align: center;
+		margin: 20px;
+	}
+}
+
+div#site_debug {
+	overflow: auto;
+	font-size: 12px;
+	padding: 0 22px 13px
+}
+
+#footer {
+	color: #fff;
+	clear: both;
+	font-size: 12px;
+	background: #222;
+}
+#footer:after {
+	content: "Range by hateradio \00a9  2009-2013";
+	margin: 1px;
+	padding: 2px;
+	color: #fff;
+}
+
+// .forum_post .body div,
+#lightbox {
+	img {
+		@include boxShadow(1px 1px 1px #000);
+		margin: 8px;
+		border: 3px solid #F7F4F4;
+		@include borderRadius(2px);
+		padding: 1px;
+	}
+}
+
+.main_column {
+    margin: 0 258px 10px 0;
+    padding: 0 3px;
+	overflow:hidden;
+	
+	#bookmarks & {
+		padding: 0;
+		display:table;
+		overflow: visible;
+	}
+	
+	blockquote {
+		img[style*="max-width"] {
+			max-width:500px !important;
+		}
+	}
+	.box {
+		.body {
+			margin: 0 11px 10px;
+			overflow: hidden;
+			padding-top: 3px
+		}
+	}
+	.linkbox {
+		margin-top: 0;
+	}
+	.pad {
+		table {
+			margin: 6px auto;
+			// width: 600px;
+		}
+	}
+	.head {
+		span[style*="float"] {
+			float: none !important;
+		}
+	}
+}
+
+div.box > div.head + table {
+    margin: 7px;
+    width: 98%;
+}
+
+.forum_post .body div img[src^="http"] {
+	margin: 3px 0;
+}

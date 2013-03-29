@@ -1,0 +1,454 @@
+﻿html, body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #E4E4DC;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	color: #AAAA9E;
+}
+
+h1, h2, .breadcrumbs {
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-align: right;
+	color: #fff;
+	padding: 0;
+	font-size: 30px;
+	@include textShadow(1px 1px 3px #000);
+}
+
+h2, .breadcrumbs {
+	margin: 0 1px 6px 0;
+	font-size: 28px;
+	letter-spacing: -2px;
+}
+
+h2 {
+	a {
+		text-decoration: none;
+	}
+}
+
+h3 {
+    color: #FFFFFF;
+    margin: 2px 0;
+    padding: 5px 0 1px 3px;
+    text-transform: uppercase;
+	font-size: 16px;
+	@include textShadow(1px 1px 3px #000);
+}
+
+h4 {
+	&.min_padding {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+a {
+	outline: none;
+	
+	&:link, &:visited {
+		color: #39CAD7;
+		text-decoration: none;
+		@include transition(color, 0.5s, ease-in-out);
+	}
+	&:hover, &:visited:hover {
+		color: #eee;
+	}
+	
+	#userinfo_minor &,
+	.alertbar &,
+	body:not(#top10) .rowb &,
+	#artist .stats li:nth-child(even) &,
+	#torrents .stats li:nth-child(even) &,
+	table#collages tr:nth-child(even) &,
+	#recommended tr:nth-child(odd) & {
+		&:link, &:visited {
+			color: #B672E1
+		}
+		&:hover, &:visited:hover {
+			color: #B4B3B2
+		}
+	}
+	
+	.forum_post &.post_id {
+		color: #333
+	}
+	
+	#userinfo_minor &,
+	.alertbar &,
+	#menu & {
+		&:hover, &:visited:hover {
+			color: #ccc;
+		}
+	}
+	
+	#collage_table td &,
+	#user .recent tr:not(.colhead) td &,
+	ul.collage_images li & {
+		&:before {
+			@include transition(all, .5s, ease-in-out);
+			content: "";
+			display: block;
+			position: absolute;
+			width: 117px;
+			height: 117px;
+			background: url(#{$imageDir}s/range.fo.cover.png) no-repeat;
+			z-index:2;
+		}
+	}
+	
+	#inbox .head &,
+	// #friends .colhead &,
+	// #friends .head &,
+	.forum_post .colhead_dark td & {
+		color: #28B9C7;
+		border-bottom: 1px solid transparent !important;
+		@include textShadow(none);
+		
+		&:hover, &:visited:hover {
+			background: #333;
+		}
+	}
+	
+	body:not(#inbox) .head &,
+	.filter_torrents h3 &,
+	.colhead_dark &,
+	.colhead &,
+	{
+		&:link, &:visited {
+			// color: #fff;
+			color: #0E659A;
+			font-weight: bold;
+		}
+		&:hover, &:visited:hover {
+			// text-decoration: underline;
+			color: #4A4A4A;
+		}
+	}
+}
+
+abbr {
+border-bottom: 1px dotted #FEFEFE;
+cursor: help
+}
+
+//F9F9EE
+button,
+select,
+textarea,
+input {
+	background: #E4E4DC;
+	border: 1px solid #222;
+	padding: 2px 3px;
+	margin: 3px 0;
+	outline:none;
+	color: #5d5d59;
+	//@include boxShadow(0 0 5px rgb(81, 203, 238));
+	@include boxShadow(#{0 0 5px rgba(0, 0, 0, .3), 0 0 3px rgba(239, 239, 239,1) inset});
+	@include transition(all, .5s, ease-in-out);
+	@include borderRadius(1px);
+	
+	&:hover {
+		outline:none;
+		border: 1px solid #0087b2;
+		//@include boxShadow(0 0 5px #3030F4);
+		@include boxShadow(#{0 0 5px rgba(48, 48, 244,1), 0 0 3px rgba(239, 239, 239,.7) inset});
+		color: #393937;
+	}
+	body &:focus {
+		outline:none;
+		border: 1px solid #AF21FF;
+		@include boxShadow(#{0 0 8px rgba(133, 23, 155, .5), 0 0 3px rgba(239, 239, 239,.7) inset});
+		color: #2a2a2a;
+	}
+}
+
+input[type="checkbox"] {
+    box-shadow: 0 0 1px #605D5D;
+	
+	&:hover {
+		box-shadow: 0 0 2px #A02FF4, 0 0 2px #F9F9F9 inset;
+	}
+}
+
+input:required:invalid {
+border: 1px solid #F425B5 !important;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+	background: #fff;
+	border: 1px solid #333;
+	color: #222;
+}
+
+button,
+:not(.colhead) input[type="button"],
+input[type="submit"] {
+	color: #494E62;
+	// display: inline;
+    font-size: 11px;
+    font-weight: bold;
+	text-shadow: 1px 1px 3px #fff;
+	padding: 4px 7px;
+	cursor: pointer;
+	margin: 3px 0;
+	@include gradientLinear(#b7bacf, #eee);
+	@include boxShadow(#{0 0 5px rgba(0, 0, 0, 0.3), 0 0 3px #EFEFEF inset, 0 1px 0 #FFFFFF inset})
+}
+
+// .sidebar button,
+// :not(.colhead) input[type="button"],
+// input[type="submit"] {
+	// float: right;
+// }
+
+.nobr input {
+	float: none;
+}
+
+blockquote {
+	width:90%;
+	background-color: #262626 !important;
+	padding: 8px 8px 8px 27px;
+	margin: 12px auto;
+	text-align: left;
+	@include borderRadius(2px);
+	
+	blockquote {
+		border-bottom: 1px dotted #555;
+		border-top: 1px dotted #444;
+		font-style: italic;
+	}
+	
+	h3 {
+		color: #555;
+	}
+	
+	pre {
+		// background-color: #E4E4DC;
+		text-indent:0;
+		margin-top: -5px;
+	}
+	
+	strong.important_text {
+		@include textShadow(none);
+		@include borderRadius(1px);
+		padding: 0 2px 1px
+	}
+}
+
+code, pre, textarea {
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;
+}
+
+code {
+	padding: 0 2px;
+	margin: -1px 0;
+	color: #8ACB47;
+	vertical-align: bottom;
+}
+
+div {
+	& > pre {
+		line-height: 140%; clear:both; overflow: auto; padding: 5px;
+	}
+	&[id*="description_"] {
+		width: 640px;
+		overflow: hidden;
+	}
+}
+
+img {
+	&[style*="max-width: 500px"] {
+		@extend .image_scale;
+	}
+	&[src*='static/common/avatars/default.png'] {
+		width: 0 !important;
+		padding-top: 150px !important;
+		padding-left: 150px !important;
+		background: url('#{$imageDir}misc/range.i.a.def.png');
+	}
+	.box_albumart p &,
+	.collage_images a &,
+	#index td.noborder a &,
+	#collage_table a &,
+	#needforseed .torrent_table td.small a[onclick] &,
+	#user .recent a & {
+		border: 2px solid #111;
+		display: block;
+		min-height: 98px;
+		min-width: 98px;
+	}
+	.latest5 tr:first-child a:hover &,
+	.box_albumart p:hover &,
+	#user .main_column table a:hover &,
+	#collage_table a:hover & {
+		opacity: .9;
+		display: block;
+	}
+}
+
+input {
+	#wiki .sidebar .box &[type="text"] {
+		width: 210px
+	}
+	#AddArtists &[type="text"] {
+		width: 190px
+	}
+	
+	&[name="tagname"] {
+		width: 170px
+	}
+	&[type="hidden"] {
+		@extend .hidden;
+	}
+	&[type="text"] {
+		padding: 3px 4px;
+		margin: 3px 0
+	}
+}
+
+marquee {display:none}
+
+p {
+	margin: 1px;
+	padding: 2px
+}
+
+textarea {
+	font-size: 13px;
+	padding: 3px;
+	width: 90%
+}
+
+select {
+	min-width: 139px;
+}
+
+span {
+	a {
+		&[href*='usetoken=']{
+			background-position: -164px -13px !important;
+			&:hover{
+				background-position: -164px 2px !important;
+			}
+		}
+	}
+}
+
+table {
+	width: 100%;
+	margin: 0 auto;
+	
+	// &.border {
+		// // margin: 0 auto 10px;
+		// width: 100%;
+	// }
+	
+	/*div:not(.box) >*/ & {
+		@include boxShadow(0 0 4px #191919);
+	}
+	
+	// & + .linkbox {
+		// margin: 10px 0;
+	// }
+}
+
+td {
+	color: #AAAA9E;
+    padding: 14px 8px;
+	border-bottom: 1px dashed #242424;
+	// border-top: 1px solid #2D2D2D;
+
+	// &[colspan="5"] > div.linkbox {
+		// margin: auto !important;
+		// padding: 0 1px 5px;
+	// }
+	
+	// .torrentdetails &[colspan="5"] > blockquote {
+		// @include boxShadow(0 0 2px #1D1D1D);
+	// }
+	
+	.torrentdetails & {
+		background: #222
+	}
+	
+	.torrentdetails &[colspan="5"] > div {
+		// background: #262626;
+		margin: 0px auto !important;
+		width: 606px;
+		// @include borderRadius(1px);
+	}
+}
+
+form tr:hover td, form tr:hover td table {
+    background-color: #303030;
+	@include transition(.2s, ease-in-out, background-color);
+}
+
+td {
+	&.small {
+		width: 1%;
+	}
+}
+
+// tr:first-child td {
+	// border-top: 0
+// }
+
+// tr:last-child td {
+	// padding-bottom: 4px
+// }
+
+ul, ol {
+	list-style-position: outside;
+	margin: 6px 0 0 14px;
+	
+	.main_column &,
+	.body &,
+	blockquote & {
+		margin-left: 30px
+	}
+	
+	&.collage_images {
+		a {
+			position: relative;
+			// overflow: hidden;
+			// display: block;
+			z-index:1;
+			border-color: #eee;
+			max-height: 98px;
+			padding: 0;
+		
+			&:hover {
+				overflow: visible;
+				z-index: 2;
+			
+				div, img {
+					z-index: 3;
+					position: absolute;
+					background-color: #151515;
+					top: -45px;
+					left: -47px;
+					min-width:200px;
+					max-height: 200px;
+					border: 3px solid #fff;
+					height: auto;
+					@include boxShadow(#333 2px 2px 6px);
+					@include borderRadius(2px);
+				}
+				div {
+					min-height: 120px
+				}
+			}
+		}
+		div {
+			display: table-cell;
+		}
+	}
+}

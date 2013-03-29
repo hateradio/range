@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Range with Style * <%= @title %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!--<link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />-->
+        <link href="/assets/application.css" rel="stylesheet" type="text/css" />
+		<link rel='shortcut icon' href="/images/favicon.ico">
+       <!--[if lt IE 9]>
+       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+       <![endif]-->
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+       <script type="text/javascript" src="/assets/application.js"></script>
+    </head>
+    <body>
+	<div id="wrapper">
+    <div class="navbar navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">Range</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">Home</a>
+              </li>
+              <li class="">
+                <a href="/preview">Preview</a>
+              </li>
+              <li class="">
+                <a href="/customize">Customize</a>
+              </li>
+              <li class="">
+                <a href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="jumbotron masthead text-center">
+  <div class="container">
+    <h1 class="text-center"><em>Range</em></h1>
+	<p>&nbsp;</p>
+    <p><small><strong>Gazelle's got a new coat</strong></small></p>
+    <p>
+      <a href="#get_now" class="btn btn-primary btn-large" title="Get Range Now">Get Now</a>
+    </p>
+    <ul class="masthead-links inline">
+      <li>
+        Version <%= RangeStyle.version %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+	<div id="content">
+        <div class="container">
+            <div class="main wrapper clearfix">
+				<div class="span8">
+					<div class="box">
+					<div class="head">~ <strong>range -a "dark" --style-for=Gazelle</strong></div>
+                <article class="pad">
+					<%= yield %>
+                </article>
+					</div>
+
+				<div class="box" id="get_now">
+				<div class="head">~ List</div>
+				<div class="pad">
+						<h3>Flavors</h3>
+					<ul>
+<%
+  RangeStyle.styles.each do |name, hash|
+%>
+	                    <li>#<%=name%>
+						<ul>
+
+<%
+	hash.each do |key, value|
+      value.each do |extra|
+%>
+						<li><a class="btn btn-small" href="/preview/?style=<%="#{name}.#{key}.#{extra}"%>">Preview</a> <span><%="#{name}.#{key}.#{extra}"%>.css</span> <input class=input-block-level size=20 value="<%=$host%>/dat.style/range/<%="#{name}.#{key}.#{extra}"%>.css" readonly></li>
+<%
+      end
+    end
+%>
+						</ul>
+						</li>
+<%  end %>
+					</ul>
+					</div>
+				</div>
+				</div>
+
+				<div class="box span3">
+				<div class="head">+</div>
+                <aside class="pad">
+                    <h3>Your Desire</h3>
+					<p>Range is organized by the site, type, and size. Copy and paste your choice to your site settings.</p>
+                </aside>
+				</div>
+            </div>
+        </div>
+
+            <footer>
+				<div>
+					<h3>&copy; <%= Time.now.year %></h3>
+                    <p>Range is created by hateradio. Most of the backgrounds are created with Colorlover.com's pattern builder.</p>
+				</div>
+            </footer>
+		</div>
+		</div>
+    </body>
+</html>

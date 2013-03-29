@@ -1,0 +1,42 @@
+﻿// Common mixin functions & vars
+
+$imageDir : '/dat.style/range/i/';
+
+@mixin transition($property, $duration, $timing-function, $delay: 0s) {
+	-moz-transition: $property $duration $timing-function $delay;
+	-webkit-transition: $property $duration $timing-function $delay;
+	-o-transition: $property $duration $timing-function $delay;
+	transition: $property $duration $timing-function $delay;
+}
+
+@mixin gradientLinear($c1, $c2) {
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($c1), to($c2));
+   background-image: -webkit-linear-gradient(top, $c1, $c2);
+   background-image: -moz-linear-gradient(top, $c1, $c2);
+   background-image: -ms-linear-gradient(top, $c1, $c2);
+   background-image: -o-linear-gradient(top, $c1, $c2);
+}
+
+@mixin borderRadius($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin textShadow($settings) {
+	-moz-text-shadow: $settings;
+	-webkit-text-shadow: $settings;
+	//-o-text-shadow: $settings;
+	text-shadow: $settings;
+}
+
+@mixin boxShadow($settings) {
+	-moz-box-shadow: $settings;
+	-webkit-box-shadow: $settings;
+	box-shadow: $settings;
+}
+
+@mixin msBoxShadow($x, $y, $b, $c) {
+	filter: progid:DXImageTransform.Microsoft.dropShadow(color=#{$c} , offX=#{$x},offY=#{$y}, positive=true);
+	-ms-filter: "filter: progid:DXImageTransform.Microsoft.dropShadow(color=#{$c} , offX=#{$x},offY=#{$y}, positive=true)";
+}

@@ -1,0 +1,38 @@
+@import "common";
+#wrapper {
+background-image: url("#{$imageDir}bg/range.bg.b9BD420.png") !important;
+background-position: -20px 0 !important;
+}
+#header {
+background: url("#{$imageDir}log/it.png") no-repeat scroll 800px 43px transparent !important;
+}
+#menu ul li {
+text-shadow: 1px 0 1px #333333, 0 0 1px lightblue, 1px 1px 1px #333333;
+/* width: 115px; */
+}
+#user div:not(.main_column) > form > table > tbody > tr > td > label {
+display: inline-block;
+min-width: 118px;
+}
+.group_torrent .uploader_info{
+display:none
+}
+table.bbtable{
+background:#222;
+padding-bottom: 0 !important;
+width: 100% !important;
+margin:3px auto 0;
+}
+table.bbtable th {
+text-shadow: 0 0 2px #333333;
+-moz-border-radius: 3px 3px 0 0;
+border-radius: 3px 3px 0 0;
+padding:3px;
+background: #1d1d1d !important
+}
+table.bbtable td {
+padding: 2px 3px !important
+}
+img[src*='static/common/avatars/default.png'] {
+background: url('#{$imageDir}misc/range.i.a.def.gen.png');
+}

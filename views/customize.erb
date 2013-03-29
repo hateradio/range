@@ -1,0 +1,24 @@
+<header><h1>Cutomizing</h1></header>
+<section>
+<p>Customizing Range is quite easy with standard CSS. Simply include it in your style by using the <code>@import</code> imperative followed by current Range or your selected flavor.</p>
+<p>Once you've included it, overriding a style can be forced with <code>!important</code>.</p>
+
+<h3>Example</h3>
+<p>The most common change to Range is the background pattern.</p>
+<p>Create a CSS file, add the import rule, and overrwite the wrapper and logo.</p>
+
+<pre>
+// custom.css
+@import url('<%= $host %>/dat.style/range.what.current.wide');
+
+div#wrapper {
+background-image: url('cool_patern.png') !important;
+background-position: -20px 0 !important;
+}
+
+div#header {
+background: url('my_logo.png') no-repeat scroll 800px 43px transparent !important;
+}
+</pre>
+</section>
+<footer></footer>
