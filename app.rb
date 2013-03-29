@@ -13,7 +13,7 @@ class RangeApp < Sinatra::Base
 
   before do
     @title = 'Home'
-    $host = request.env['rack.url_scheme'] + '://' + request.env['HTTP_HOST']
+    $host = 'https://' + request.env['HTTP_HOST'] # request.env['rack.url_scheme']
   end
 
   set :production, ENV['RACK_ENV'] == 'production'
