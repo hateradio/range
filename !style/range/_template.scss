@@ -33,6 +33,7 @@ div#site_debug,
 	ul {
 		overflow:hidden;
 		margin: 0;
+		white-space: nowrap;
 		
 		&:hover {
 			// height: auto;
