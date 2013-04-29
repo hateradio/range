@@ -461,7 +461,7 @@ div.colhead_dark,
 	@include gradientLinear(#eee, #ccc);
 	border: 0;
 	color: #414E4C;
-	// white-space: nowrap;
+	white-space: nowrap;
 	line-height: 15px !important;
 	font-weight: bold;
 	overflow: hidden;
