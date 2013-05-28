@@ -239,41 +239,41 @@ table,
 	border-bottom: 5px solid #333;
 }
 
-.box_albumart {
-	margin: 0;
-	border: 0;
-	div {
-		display: none;
-		border: 0 !important
-	}
-	img {
-		display: block;
-		width: 112px;
-	}
-	p {
-		position: absolute;
-		top: 16px;
-		left:25px;
-		cursor: pointer;
-		padding: 0;
-		margin: 0;
-		border-color: #E4E4DC !important;
-		border-style: solid;
-		border-width: 3px 3px 4px  !important;
-		height: 70px !important;
-		width: 114px !important;
-		@include borderRadius(2px !important);
-	}
-	span {
-		width: 80px;
-		background: #99CC00;
-		position: absolute;
-		top: 54px;
-		left: 80px;
-		color: white;
-		display: none !important;
-	}
-}
+// .box_albumart {
+	// margin: 0;
+	// border: 0;
+	// div {
+		// display: none;
+		// border: 0 !important
+	// }
+	// img {
+		// display: block;
+		// width: 112px;
+	// }
+	// p {
+		// position: absolute;
+		// top: 16px;
+		// left:25px;
+		// cursor: pointer;
+		// padding: 0;
+		// margin: 0;
+		// border-color: #E4E4DC !important;
+		// border-style: solid;
+		// border-width: 3px 3px 4px  !important;
+		// height: 70px !important;
+		// width: 114px !important;
+		// @include borderRadius(2px !important);
+	// }
+	// span {
+		// width: 80px;
+		// background: #99CC00;
+		// position: absolute;
+		// top: 54px;
+		// left: 80px;
+		// color: white;
+		// display: none !important;
+	// }
+// }
 
 //.box_artists {
 //	margin-top: -5px
