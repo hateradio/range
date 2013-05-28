@@ -195,6 +195,10 @@ div#site_debug,
 			text-align: center;
 			cursor: pointer;
 			padding: 6px 13px 6px 13px;
+			
+			li {
+				display: block;
+			}
 		}
 	}
 }
