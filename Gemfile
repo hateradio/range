@@ -5,7 +5,7 @@ ruby '2.0.0'
 gem 'thin'
 gem 'sinatra', '1.4.2'
 
-# Sass, Compass, Bootstrap-Sas, Sprockets
+# Sass, Compass, Bootstrap-Sass, Sprockets
 group :assets do
   gem 'sprockets', '~> 2.0'
   gem 'sprockets-sass', '~> 0.4.0'

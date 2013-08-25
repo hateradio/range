@@ -1004,7 +1004,11 @@ border-bottom: none;
 }
 
 .user_title {
-	font-size: 10px
+	font-size: 10px;
+
+	& > a {
+    	@include textShadow(none !important);
+    }
 }
 
 .vertical_space {

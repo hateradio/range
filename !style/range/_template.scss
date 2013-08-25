@@ -206,6 +206,7 @@ div#site_debug,
     width: 98% !important;
 }
 
+.autocomplete-suggestions,
 #torrentscomplete,
 #artistcomplete {
 	position: absolute;
@@ -216,8 +217,12 @@ div#site_debug,
 	top: 134px;
 	background: #222;
 	font-size:12px;
+	font-weight: bold;
+	border: 0;
+	@include boxShadow(0 0 3px #44406F);
 }
 
+.autocomplete-suggestions div,
 #artistcomplete > li {
 	margin: 0 !important;
 	font-size: 11px;
@@ -227,6 +232,19 @@ div#site_debug,
 	cursor: pointer;
 	background: #222;
 	display: block !important;
+}
+
+.autocomplete-suggestions strong {
+    background: #111111;
+    color: #E1E1E1;
+    font-weight: bold;
+    padding: 0 2px;
+    @include borderRadius(1px);
+}
+
+.autocomplete-suggestion.autocomplete-selected {
+    background: #303030;
+    width: 100% !important;
 }
 
 #content {
@@ -264,6 +282,18 @@ div#site_debug {
 		@include borderRadius(2px);
 		padding: 1px;
 	}
+}
+
+#noty_bottomRight_layout_container > li {
+    border: 1px solid #363535 !important;
+    @include boxShadow(0 0 2px #110F0F !important);
+    color: inherit !important;
+    background-color: #1F1F1F !important;
+}
+
+#noty_bottomRight_layout_container .noty_buttons {
+    background: none repeat scroll 0 0 #252525 !important;
+    border-top: 1px solid #333333 !important;
 }
 
 .main_column {
