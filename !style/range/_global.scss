@@ -8,3 +8,12 @@
     letter-spacing: normal;
     line-height: 16px;
 }
+
+.tooltipster-default {
+    border: 0 !important;
+}
+
+.tooltipster-default .tooltipster-content {
+    font-weight: bold;
+    text-shadow: 0 0 3px #000
+}
