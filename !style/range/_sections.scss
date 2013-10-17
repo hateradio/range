@@ -209,7 +209,11 @@ text-transform: none;
 // }
 
 #rules .pad {
-	padding: 0 !important
+	padding: 0 !important;
+}
+
+#rules .rule_summary {
+	padding: 8px 20px 0 20px !important;
 }
 
 #rules table,
