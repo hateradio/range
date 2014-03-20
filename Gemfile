@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 # Thin, Sinatra
 gem 'thin'
-gem 'sinatra', '1.4.2'
+gem 'sinatra', '1.4.4'
 
 # Sass, Compass, Bootstrap-Sass, Sprockets
 group :assets do
