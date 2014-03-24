@@ -140,7 +140,7 @@ button,
 select,
 textarea,
 input {
-	background: #E4E4DC;
+	background: #E4E4DC !important;
 	border: 1px solid #222;
 	padding: 2px 3px;
 	margin: 3px 0;
@@ -148,7 +148,7 @@ input {
 	color: #5d5d59;
 	//@include boxShadow(0 0 5px rgb(81, 203, 238));
 	@include boxShadow(#{0 0 5px rgba(0, 0, 0, .3), 0 0 3px rgba(239, 239, 239,1) inset});
-	@include transition(all, .5s, ease-in-out);
+	@include transition(all, .3s, ease-in-out);
 	@include borderRadius(1px);
 	
 	&:hover {
@@ -431,16 +431,17 @@ ul, ol {
 				z-index: 2;
 			
 				div, img {
-					z-index: 3;
-					position: absolute;
 					background-color: #151515;
-					top: -45px;
-					left: -47px;
-					max-height: 200px;
-					max-width: 200px;
-					min-height: 120px;
 					border: 3px solid #fff;
 					height: auto;
+					left: -47px;
+					top: -45px;
+					max-height: 200px;
+					max-width: 200px;
+					min-height: 200px;
+					width: auto;
+					position: absolute;
+					z-index: 3;
 					@include boxShadow(#333 2px 2px 6px);
 					@include borderRadius(2px);
 				}
