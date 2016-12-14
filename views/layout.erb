@@ -84,16 +84,16 @@
 						<h3>Flavors</h3>
 					<ul>
 <%
-  RangeStyle.styles.each do |name, hash|
+  RangeStyle.styles.each do |name, list|
 %>
 	                    <li>#<%=name%>
 						<ul>
 
 <%
-	hash.each do |key, value|
-      value.each do |extra|
+	list.each do |key|
+      %w[wide slim].each do |size|
 %>
-						<li><a class="btn btn-small" href="/preview/?style=<%="#{name}.#{key}.#{extra}"%>">Preview</a> <span><%="#{name}.#{key}.#{extra}"%>.css</span> <input class=input-block-level size=20 value="<%=$host%>/dat.style/range/<%="#{name}.#{key}.#{extra}"%>.css" readonly></li>
+						<li><a class="btn btn-small" href="/preview/?style=<%="#{name}.#{key}.#{size}"%>">Preview</a> <span><%="#{name}.#{key}.#{size}"%>.css</span> <input class=input-block-level size=20 value="<%=$host%>/dat.style/range/<%="#{name}.#{key}.#{size}"%>.css" readonly></li>
 <%
       end
     end

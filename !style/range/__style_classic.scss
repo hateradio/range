@@ -1,4 +1,4 @@
 @import "common";
 #wrapper {
-	background-image: url('#{$imageDir}bg/range.bg.color.png');
+	background-image: url('#{$imageDir}bg/range.bg.color.png') !important;
 }

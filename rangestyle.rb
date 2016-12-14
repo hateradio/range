@@ -1,7 +1,7 @@
 module RangeStyle
   extend self
 
-  VERSION = 2.0
+  VERSION = 2.1
 
   DIR = {
     raw: File.join('!style', 'range'),
@@ -12,18 +12,10 @@ module RangeStyle
   # A list of styles by site
   # Wide and Slim are the type of width
   STYLES = {
-    what: {
-      current: %w[wide slim],
-      classic: %w[wide slim],
-      sommar: %w[wide],
-      summer: %w[wide],
-    },
-    ptp: {
-      current: %w[wide],
-    },
-    it: {
-      current: %w[wide],
-    }
+    apl: %w[current classic sommar summer],
+    ptp: %w[current],
+    it: %w[current],
+    what: %w[current classic]
   }
 
   def version
@@ -41,15 +33,16 @@ module RangeStyle
     require 'sass'
     compass_config
     range = { base: scss_engine('range') }
-    STYLES.each do |site, hash|
+    STYLES.each do |site, styles|
+      p site
       range[:site] = scss_engine '__site_' + site.to_s
 
-      hash.each do |style, type|
+      styles.each do |style|
         range[:style] = scss_engine '__style_' + style.to_s
 
-        type.each do |size|
+        %w[wide slim].each do |size|
           range[:size] = scss_engine '__size_' + size
-          self::Write.new(range, DIR[:out] + '/' + [site, style, size, 'css'].join('.')).out
+          self::Write.new(range, File.join(DIR[:out], [site, style, size, 'css'].join('.'))).out
         end
       end
     end

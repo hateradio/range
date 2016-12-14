@@ -39,12 +39,25 @@
 	font-weight: inherit;
 	text-decoration: underline;
 }
+
+.home-stick {
+	position: absolute;
+	top: 0;
+	left 0;
+}
+
+#styles li li {
+    display: inline-block;
+    padding-bottom: 9px;
+}
 	</style>
 </head>
 <body id="index">
 <div id="wrapper">
 <div class="linker">
-	<h1><a href="/" title="Home">#</a> Preview</h1>
+
+	<h1>Style Preview</h1>
+	<p class="home-stick"><a href="/" title="Home">&#x1F3E0; Home</p></h2>
 	<ul>
 <%
   RangeApp::SDB.sections.each do |name, title|
@@ -59,17 +72,17 @@
 
 	<ul id="styles">
 <%
-  RangeStyle.styles.each do |name, hash|
+  RangeStyle.styles.each do |name, list|
 %>
 		<li>#<%=name%>
 			<ul>
 <%
-	hash.each do |key, value|
-      value.each do |extra|
-		style = "#{name}.#{key}.#{extra}"
+	list.each do |key|
+      %w[wide slim].each do |size|
+		style = "#{name}.#{key}.#{size}"
 %>
 				<li<%=' class="selected"' if @style == style %>>
-					<a href="?style=<%=style%>"><%="#{name}.#{key}.#{extra}"%>.css</a>
+					<a href="?style=<%=style%>"><%="#{name}.#{key}.#{size}"%>.css</a>
 				</li>
 <%
       end

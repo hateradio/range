@@ -73,7 +73,7 @@ class RangeApp < Sinatra::Base
     def find_style(style)
       begin
         parts = style.split '.'
-        style if RangeStyle.styles[parts[0].to_sym][parts[1].to_sym].include? parts[2]
+        style if RangeStyle.styles[parts[0].to_sym].include? parts[1]
       rescue
       end
     end
