@@ -59,34 +59,35 @@ div#site_debug,
 	@include borderRadius(0 0 5px 5px);
 }
 
-	#userinfo_username,
-	#userinfo_major,
-	#userinfo_stats,
-	#userinfo_minor li,
-	#menu li {
-		float: left;
-		padding-bottom: 3px
-	}
+#userinfo_username,
+#userinfo_major,
+#userinfo_stats,
+#userinfo_minor li,
+#menu li {
+	float: left;
+	padding-bottom: 3px
+}
 
-	#userinfo_minor {
-		font-size: 11px;
-		clear: both;
-		width: 940px;
-	}
+#userinfo_minor {
+	font-size: 11px;
+	clear: both;
+	width: 940px;
+}
 
-	#userinfo_stats {
-		float: right;
-		padding-top: 1px;
-		font-size: 11px
-	}
+#userinfo_stats {
+	float: right;
+	padding-top: 1px;
+	font-size: 11px
+}
 
-		#userinfo_username li,
-		#userinfo_major li,
-		#userinfo_stats li,
-		#userinfo_minor li {
-			display: inline;
-			padding: 4px 4px
-		}
+#userinfo_username li,
+#userinfo_major li,
+#userinfo_stats li,
+#userinfo_minor li {
+	display: inline;
+	padding: 4px 4px
+}
+
 // #menu:before {
     // background: url("http://www.webdesignerwall.com/demo/css-gradient-text/images/gradient-dark-stripe-hz.png") repeat scroll 0 0 transparent;
     // border: 1px solid blue;
@@ -111,9 +112,9 @@ div#site_debug,
 			@include textShadow(#000 0 0 2px);
 		}
 	}
-	
+
 	ul {
-		list-style-position:outside;
+		list-style-position: outside;
 		font-size: 15px;
 		margin-bottom: 4px;
 		// width: 943px;
@@ -123,13 +124,13 @@ div#site_debug,
 		background-color: #eee;
 		@include gradientLinear(#eee, #ccc);
 		@include borderRadius(1px);
-		
+
 		li {
 			display: inline;
 			float: none;
 			margin: 0 -3px;
 			padding: 0;
-		
+
 			a {
 				display: inline-block;
 				padding: 5px 0 6px;
@@ -281,6 +282,8 @@ div#site_debug {
 		border: 3px solid #F7F4F4;
 		@include borderRadius(2px);
 		padding: 1px;
+		max-width: 95%;
+		max-height: 95%;
 	}
 }
 

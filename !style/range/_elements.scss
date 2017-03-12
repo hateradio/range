@@ -49,15 +49,17 @@ h4 {
 a {
 	outline: none;
 	
+	// default link color
 	&:link, &:visited {
 		color: #39CAD7;
 		text-decoration: none;
-		@include transition(color, 0.5s, ease-in-out);
+		@include transition(color, 0.3s, ease-in-out);
 	}
 	&:hover, &:visited:hover {
 		color: #eee;
 	}
 	
+	// "even" link color
 	#userinfo_minor &,
 	.alertbar &,
 	body:not(#top10) .rowb &,
@@ -131,8 +133,8 @@ a {
 }
 
 abbr {
-border-bottom: 1px dotted #FEFEFE;
-cursor: help
+	border-bottom: 1px dotted #FEFEFE;
+	cursor: help
 }
 
 //F9F9EE
@@ -175,7 +177,7 @@ input[type="checkbox"] {
 }
 
 input:required:invalid {
-border: 1px solid #F425B5 !important;
+	border: 1px solid #F425B5 !important;
 }
 
 button:active,
@@ -267,6 +269,8 @@ img {
 	&[style*="max-width: 500px"] {
 		@extend .image_scale;
 	}
+
+	// override default avatar style
 	&[src*='static/common/avatars/default.png'] {
 		width: 0 !important;
 		padding-top: 150px !important;
