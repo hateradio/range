@@ -1,7 +1,7 @@
 module RangeStyle
   extend self
 
-  VERSION = 2.1
+  VERSION = 2.2
 
   DIR = {
     raw: File.join('!style', 'range'),
