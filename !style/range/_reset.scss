@@ -30,9 +30,9 @@ sub { bottom: -0.25em; }
 button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
 textarea { overflow: auto; vertical-align:text-top; }
 
-::-moz-selection { background: #fe57a1; color:#fff; @include textShadow(none); }
-::-webkit-selection { background: #fe57a1; color:#fff; @include textShadow(none); }
-::selection { background:#fe57a1; color:#fff; @include textShadow(none); }
+::-moz-selection { background: #fe57a1; color:#fff; text-shadow: none; }
+::-webkit-selection { background: #fe57a1; color:#fff; text-shadow: none; }
+::selection { background:#fe57a1; color:#fff; text-shadow: none; }
 
 input::-moz-focus-inner,
 button::-moz-focus-inner { border: 0; padding: 0; }

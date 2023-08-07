@@ -23,10 +23,10 @@ table-layout: fixed;
 #wiki #nav_wiki a,
 #staff #nav_staff a {
 	background: url("#{$imageDir}s/range.i.tip.png") no-repeat scroll center bottom transparent;
-	@include transition(none, 0s, ease, 0s);
+	transition: none, 0s, ease, 0s;
 	&:hover {
 		background: url("#{$imageDir}s/range.i.tip.png") no-repeat scroll center bottom #332B4E;
-		@include boxShadow(0 0 3px #110C36 inset);
+		box-shadow: 0 0 3px #110C36 inset;
 	}
 }
 
@@ -148,7 +148,7 @@ text-transform: none;
 				font-size: 21px;
 				margin-top: -3px;
 				display: block;
-				@include textShadow(1px 2px 0 #1f1e1e);
+				text-shadow: 1px 2px 0 #1f1e1e;
 			}
 		}
 	}
@@ -164,7 +164,7 @@ text-transform: none;
 		// display:block;
 	// }
 	& .head {
-		@include borderRadius(2px 2px 0 0);
+		border-radius: 2px 2px 0 0;
 		margin-top: -3px;
 		// background: #262626;
 		// color: inherit;
@@ -232,7 +232,7 @@ text-transform: none;
 	 .forum_post {
 		.colhead_dark {
 			td {
-				@include borderRadius(2px 2px 0 0 !important);
+				border-radius: 2px 2px 0 0 !important;
 			}
 		}
 	}
@@ -284,7 +284,7 @@ text-transform: none;
 				display: inline !important;
 				background: transparent !important;
 				border: 0 !important;
-				@include boxShadow(none);
+				box-shadow: none;
 			}
 		}
 	}
@@ -311,7 +311,7 @@ text-transform: none;
 	.colhead_dark td {
 		span {
 			font-size: 11px;
-			@include textShadow(none);
+			text-shadow: none;
 		}
 
 		a {
@@ -471,7 +471,7 @@ div.colhead_dark,
 	overflow: hidden;
 	//border-bottom: 2px solid #0095FF;
 	border-bottom: 2px solid #C92989;
-	//@include textShadow(1px 1px 1px #aaa);
+	//text-shadow: 1px 1px 1px #aaa;
 }
 
 .forum_unread .colhead_dark > td {
@@ -502,6 +502,6 @@ div.colhead_dark,
 	margin: auto;
 	overflow: hidden;
 	width: 100px;
-	@include borderRadius(1px 1px 4px #151515);
-	@include boxShadow(1px 1px 4px #111);
+	border-radius: 1px 1px 4px #151515;
+	box-shadow: 1px 1px 4px #111;
 }
