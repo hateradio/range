@@ -1,0 +1,25 @@
+{
+  "name": "range",
+  "version": "2.2.0",
+  "description": "Range style",
+  "main": "range-out.js",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/range.git"
+  },
+  "keywords": [
+    "range",
+    "style"
+  ],
+  "author": "hofr",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "image-type": "^4.1.0",
+    "sass": "^1.64.2"
+  }
+}

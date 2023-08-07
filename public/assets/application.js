@@ -1,1 +1,0 @@
-jQuery(function(t){"use strict";t("#get_now ul").on("click","input",function(){this.select()})});

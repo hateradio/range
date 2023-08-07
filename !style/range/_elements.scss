@@ -15,7 +15,7 @@ h1, h2, .breadcrumbs {
 	color: #fff;
 	padding: 0;
 	font-size: 30px;
-	@include textShadow(1px 1px 3px #000);
+	text-shadow: 1px 1px 3px #000;
 }
 
 h2, .breadcrumbs {
@@ -36,7 +36,7 @@ h3 {
     padding: 5px 0 1px 3px;
     text-transform: uppercase;
 	font-size: 16px;
-	@include textShadow(1px 1px 3px #000);
+	text-shadow: 1px 1px 3px #000;
 }
 
 h4 {
@@ -53,7 +53,7 @@ a {
 	&:link, &:visited {
 		color: #39CAD7;
 		text-decoration: none;
-		@include transition(color, 0.3s, ease-in-out);
+		transition: color, 0.3s, ease-in-out;
 	}
 	&:hover, &:visited:hover {
 		color: #eee;
@@ -91,7 +91,7 @@ a {
 	#user .recent tr:not(.colhead) td &,
 	ul.collage_images li & {
 		&:before {
-			@include transition(all, .5s, ease-in-out);
+			transition: all, .5s, ease-in-out;
 			content: "";
 			display: block;
 			position: absolute;
@@ -108,7 +108,7 @@ a {
 	.forum_post .colhead_dark td & {
 		color: #28B9C7;
 		border-bottom: 1px solid transparent !important;
-		@include textShadow(none);
+		text-shadow: none;
 		
 		&:hover, &:visited:hover {
 			background: #333;
@@ -118,7 +118,7 @@ a {
 	body:not(#inbox) .head &,
 	.filter_torrents h3 &,
 	.colhead_dark &,
-	.colhead &,
+	.colhead &
 	{
 		&:link, &:visited {
 			// color: #fff;
@@ -148,22 +148,22 @@ input {
 	margin: 3px 0;
 	outline:none;
 	color: #5d5d59;
-	//@include boxShadow(0 0 5px rgb(81, 203, 238));
-	@include boxShadow(#{0 0 5px rgba(0, 0, 0, .3), 0 0 3px rgba(239, 239, 239,1) inset});
-	@include transition(all, .3s, ease-in-out);
-	@include borderRadius(1px);
+	//box-shadow: 0 0 5px rgb(81, 203, 238);
+	box-shadow: 0 0 5px rgba(0, 0, 0, .3), 0 0 3px rgba(239, 239, 239,1) inset;
+	transition: all, .3s, ease-in-out;
+	border-radius: 1px;
 	
 	&:hover {
 		outline:none;
 		border: 1px solid #0087b2;
-		//@include boxShadow(0 0 5px #3030F4);
-		@include boxShadow(#{0 0 5px rgba(48, 48, 244,1), 0 0 3px rgba(239, 239, 239,.7) inset});
+		//box-shadow: 0 0 5px #3030F4;
+		box-shadow: 0 0 5px rgba(48, 48, 244,1), 0 0 3px rgba(239, 239, 239,.7) inset;
 		color: #393937;
 	}
 	body &:focus {
 		outline:none;
 		border: 1px solid #AF21FF;
-		@include boxShadow(#{0 0 8px rgba(133, 23, 155, .5), 0 0 3px rgba(239, 239, 239,.7) inset});
+		box-shadow: 0 0 8px rgba(133, 23, 155, .5), 0 0 3px rgba(239, 239, 239,.7) inset;
 		color: #2a2a2a;
 	}
 }
@@ -200,7 +200,7 @@ input[type="submit"] {
 	cursor: pointer;
 	margin: 3px 0;
 	@include gradientLinear(#b7bacf, #eee);
-	@include boxShadow(#{0 0 5px rgba(0, 0, 0, 0.3), 0 0 3px #EFEFEF inset, 0 1px 0 #FFFFFF inset})
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 3px #EFEFEF inset, 0 1px 0 #FFFFFF inset;
 }
 
 // .sidebar button,
@@ -219,7 +219,7 @@ blockquote {
 	padding: 8px 8px 8px 27px;
 	margin: 12px auto;
 	text-align: left;
-	@include borderRadius(2px);
+	border-radius: 2px;
 	
 	blockquote {
 		border-bottom: 1px dotted #555;
@@ -238,8 +238,8 @@ blockquote {
 	}
 	
 	strong.important_text {
-		@include textShadow(none);
-		@include borderRadius(1px);
+		text-shadow: none;
+		border-radius: 1px;
 		padding: 0 2px 1px
 	}
 }
@@ -356,7 +356,7 @@ table {
 	// }
 	
 	/*div:not(.box) >*/ & {
-		@include boxShadow(0 0 4px #191919);
+		box-shadow: 0 0 4px #191919;
 	}
 	
 	// & + .linkbox {
@@ -376,7 +376,7 @@ td {
 	// }
 	
 	// .torrentdetails &[colspan="5"] > blockquote {
-		// @include boxShadow(0 0 2px #1D1D1D);
+		// box-shadow: 0 0 2px #1D1D1D;
 	// }
 	
 	.torrentdetails & {
@@ -387,13 +387,13 @@ td {
 		// background: #262626;
 		margin: 0px auto !important;
 		width: 606px;
-		// @include borderRadius(1px);
+		// border-radius: 1px;
 	}
 }
 
 form tr:hover td, form tr:hover td table {
     background-color: #303030;
-	@include transition(.2s, ease-in-out, background-color);
+	transition: .2s, ease-in-out, background-color;
 }
 
 td {
@@ -446,8 +446,8 @@ ul, ol {
 					width: auto;
 					position: absolute;
 					z-index: 3;
-					@include boxShadow(#333 2px 2px 6px);
-					@include borderRadius(2px);
+					box-shadow: #333 2px 2px 6px;
+					border-radius: 2px;
 				}
 				div {
 					min-height: 127px;

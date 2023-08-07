@@ -54,9 +54,9 @@ div#site_debug,
 	padding: 5px 8px 4px;
 	margin-bottom: 7px;
 	color: #eee;
-	@include textShadow(#000 1px 1px 2px);
-	@include boxShadow(0 0 3px #000000);
-	@include borderRadius(0 0 5px 5px);
+	text-shadow: #000 1px 1px 2px;
+	box-shadow: 0 0 3px #000000;
+	border-radius: 0 0 5px 5px;
 }
 
 #userinfo_username,
@@ -109,7 +109,7 @@ div#site_debug,
 		}
 		&:hover, &:visited:hover {
 			// lightblue 0 0 3px,
-			@include textShadow(#000 0 0 2px);
+			text-shadow: #000 0 0 2px;
 		}
 	}
 
@@ -123,7 +123,7 @@ div#site_debug,
 		white-space: nowrap;
 		background-color: #eee;
 		@include gradientLinear(#eee, #ccc);
-		@include borderRadius(1px);
+		border-radius: 1px;
 
 		li {
 			display: inline;
@@ -136,15 +136,15 @@ div#site_debug,
 				padding: 5px 0 6px;
 				text-align:center;
 				width:96px;
-				// @include textShadow('1px 0 1px #333, 0 0 1px lightblue, 0 1px 1px #333');
+				// text-shadow: '1px 0 1px #333, 0 0 1px lightblue, 0 1px 1px #333';
 				// text-shadow: 1px 0 1px #333, 0 0 1px lightblue, 0 1px 1px #333;
-				@include transition(background-color, .5s, ease-in-out);
+				transition: background-color, .5s, ease-in-out;
 				-moz-text-shadow: 1px 0 1px #A6627A, 0 0 1px lightblue, 0 1px 1px #445187;
 				-webkit-text-shadow: 1px 0 1px #A6627A, 0 0 1px lightblue, 0 1px 1px #445187;
 				text-shadow: 1px 0 1px #A6627A, 0 0 1px lightblue, 0 1px 1px #445187;
 				&:hover {
 					@include gradientLinear(#444, #333);
-					@include textShadow(1px 1px 0px #2D3392);
+					text-shadow: 1px 1px 0px #2D3392;
 				}
 			}
 		}
@@ -153,7 +153,7 @@ div#site_debug,
 
 #menu ul,
 #searchbars ul {
-	@include boxShadow(0 0 6px #000);
+	box-shadow: 0 0 6px #000;
 	text-align:center;
 	width: auto
 }
@@ -165,7 +165,7 @@ div#site_debug,
 	padding: 4px;
 	font-size: 11px;
 	background: rgba(0, 0, 0, .23);
-	@include boxShadow(#222 1px 1px 0);
+	box-shadow: #222 1px 1px 0;
 	
 	div {
 		display: inline;
@@ -220,7 +220,7 @@ div#site_debug,
 	font-size:12px;
 	font-weight: bold;
 	border: 0;
-	@include boxShadow(0 0 3px #44406F);
+	box-shadow: 0 0 3px #44406F;
 }
 
 .autocomplete-suggestions div,
@@ -240,7 +240,7 @@ div#site_debug,
     color: #E1E1E1;
     font-weight: bold;
     padding: 0 2px;
-    @include borderRadius(1px);
+    border-radius: 1px;
 }
 
 .autocomplete-suggestion.autocomplete-selected {
@@ -277,10 +277,10 @@ div#site_debug {
 // .forum_post .body div,
 #lightbox {
 	img {
-		@include boxShadow(1px 1px 1px #000);
+		box-shadow: 1px 1px 1px #000;
 		margin: 8px;
 		border: 3px solid #F7F4F4;
-		@include borderRadius(2px);
+		border-radius: 2px;
 		padding: 1px;
 		max-width: 95%;
 		max-height: 95%;
@@ -289,7 +289,7 @@ div#site_debug {
 
 #noty_bottomRight_layout_container > li {
     border: 1px solid #363535 !important;
-    @include boxShadow(0 0 2px #110F0F !important);
+    box-shadow: 0 0 2px #110F0F !important;
     color: inherit !important;
     background-color: #1F1F1F !important;
 }
