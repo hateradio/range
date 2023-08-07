@@ -16,7 +16,7 @@ const RangeStyle = {
     apl: ['current', 'classic', 'sommar', 'summer'],
     ptp: ['current'],
     it: ['current'],
-    what: ['current', 'classic']
+    what: ['current', 'classic', 'sommar', 'summer']
   },
 
   version() {
@@ -91,13 +91,11 @@ const B64 = (cssString) => {
   }
 
   const convert = () => {
-    //  const regex = /url\(['"]?\/dat\.style\/range\/i([^'"\)]+\.(png|jpg|jpeg|gif))['"]?\)/g;
-    //  const regex = /url\(['"]?\/dat\.style\/range\/i([^'"\)]+\.(png|jpg|jpeg|gif)(\.[^'"\)]+)?)['"]?\)/g;
     const regex = /url\(['"]?\/dat\.style\/range\/i(.+?\.(png|jpg|jpeg|gif))['"]?\)/g;
 
     const matches = [...cssString.matchAll(regex)];
 
-    console.log(matches.length);
+    // console.log(matches.length);
 
     for (const match of matches) {
       const imagePath = RangeStyle.DIR.img + match[1]; // Group 1 contains the image path
