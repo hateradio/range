@@ -8,7 +8,7 @@ const RangeStyle = {
 
   DIR: {
     raw: path.join('!style', 'range'),
-    out: path.join('public', 'dat.style', 'range'),
+    out: path.join('docs', 'dat.style', 'range'),
     img: path.join('!style', 'range', 'img')
   },
 
