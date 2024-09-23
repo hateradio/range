@@ -38,7 +38,6 @@
 
         dt {
             padding: 10px;
-            display: inline;
         }
 
         dd {
@@ -101,7 +100,23 @@
             <dt><a class="link__img link__img_github" title="Range Source"
                     href="https://github.com/hateradio/range">https://github.com/hateradio/range</a></dt>
         </dl>
+
+        <dl id="styles">
+        </dl>
     </div>
+
+    <script>
+        ;(function() {
+            const s = document.getElementById('styles');
+            const l = ['apl.classic.slim.css', 'apl.classic.wide.css' , 'apl.current.slim.css' , 'apl.current.wide.css' , 'apl.sommar.slim.css' , 'apl.sommar.wide.css' , 'apl.summer.slim.css' , 'apl.summer.wide.css' , 'it.current.slim.css' , 'it.current.wide.css' , 'ptp.current.slim.css' , 'ptp.current.wide.css' , 'what.classic.slim.css' , 'what.classic.wide.css' , 'what.current.slim.css' , 'what.current.wide.css' , 'what.sommar.slim.css' , 'what.sommar.wide.css' , 'what.summer.slim.css' , 'what.summer.wide.css']
+
+            l.forEach(v => {
+                s.insertAdjacentHTML('afterbegin', `<dd>${v}</dd>
+            <dt><a class="link__img link__img_github" title="${v}"
+                    href="dat.style/range/${v}">dat.style/range/${v}</a></dt>`)
+            })
+        }());
+    </script>
 
     <footer class="site-footer">&copy; forever-and-ever-and-ever hateradio</footer>
 </body>
